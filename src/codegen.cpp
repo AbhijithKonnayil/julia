@@ -7359,6 +7359,7 @@ extern "C" void *jl_init_llvm(void)
         // Make sure we are using the large code model on 64bit
         // Let LLVM pick a default suitable for jitting on 32bit
         .setCodeModel(CodeModel::Large)
+#endif
 #ifdef DISABLE_OPT
         .setOptLevel(CodeGenOpt::None)
 #else
